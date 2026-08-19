@@ -267,9 +267,9 @@ The project can be extended by adding:
 
 ## 👩‍💻 Author
 
-**Sania Saifi**
+**Sameer **
 
-BCA Student
+BTECH Student
 
 ---
 
