@@ -1,0 +1,31 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import sklearn
+from sklearn.datasets import make_blobs
+from sklearn.neighbors import  KNeighborsClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+#dataset create synthetic datasets
+X,y=make_blobs(n_samples=4000,centers=3,n_features=3,random_state=80,cluster_std=2)
+print('X(features):')
+print(X)
+print('\n y(Target/Class)')
+print(y)
+print('\n Shape of y :')
+print(y.shape)
+#plot
+
+plt.figure(figsize=(6,6))
+plt.scatter(X[:,0],X[:,1],c=y,marker='.',s=10,edgecolors='blue')
+plt.xlabel("features 1")
+plt.ylabel("featurs2 ")
+
+plt.show()
+df=pd.DataFrame(X)
+df.head()
+plt.rcParams['figure.figsize']=(10,15)
+df.plot(kind='hist',subplots=True,layout=(5,2),sharex=False,sharey=False,bins=100)
+plt.show()
